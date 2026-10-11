@@ -1,0 +1,37 @@
+# Generated build output and machine-specific evidence
+/workspace/
+
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment files; retain safe examples
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Machine-specific bridge and client configuration
+/config/*.local.json
+!/config/*.local.example.json
+
+# Private sessions, credentials, and runtime logs
+**/private/
+**/sessions/
+**/token
+**/token.*
+**/*.token
+**/*.token.*
+**/*.log
+**/*.log.*
+**/syslog
+**/syslog.*
+
+# Local NX part files and numbered/backed-up variants
+**/*.prt
+**/*.prt[0-9]
+**/*.prt.*

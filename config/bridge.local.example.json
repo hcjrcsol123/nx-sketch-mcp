@@ -1,0 +1,7 @@
+{
+  "pipe_name": "nx_sketch_mcp_m2_replace_me",
+  "token_file": "C:\\ABSOLUTE\\PATH\\TO\\session_token.txt",
+  "helper_path": "C:\\ABSOLUTE\\PATH\\TO\\nx-sketch-mcp\\workspace\\build\\current\\M2\\M2JsonlHelper.exe",
+  "timeout_seconds": 5.0
+}
+

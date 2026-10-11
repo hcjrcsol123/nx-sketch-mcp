@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "nx-sketch-mcp": {
+      "command": "C:\\Python314\\python.exe",
+      "args": [
+        "-B",
+        "C:\\ABSOLUTE\\PATH\\TO\\nx-sketch-mcp\\tools\\mcp_stdio.py",
+        "--config",
+        "C:\\ABSOLUTE\\PATH\\TO\\nx-sketch-mcp\\config\\bridge.local.json"
+      ]
+    }
+  }
+}
+
