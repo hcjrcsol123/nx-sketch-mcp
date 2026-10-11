@@ -62,18 +62,3 @@ C#桥使用UFSession.GetUFSession().Modl.AskBoundingBox(tag, double[6])，Create
 经授权另用NXOpen Python Journal时，包围盒接口为uf.ModlGeneral.AskBoundingBox(tag)；CreateArc半径、起角、终角应显式传float，不能依赖整数隐式转换。Python命名不能直接替换C#调用。运行外部Journal前必须交回MCP所有权。
 
 螺纹使用 `ThreadBuilder` 的 `Manual` / `Detailed` 模式。`IsInternalThread` 只读，起始对象须为面；`SelectDisplayableObject.SetValue` 传对象、视图和点；手动指定大/小径时须同步 `ShaftPreference` / `ShaftDiameterExp`。UF样条的 `slope_type` / `crvatr_type` 未指定值为 `-1`，不是 `0`。这些接口用法固化于 `M7NxHelicalFactory.cs`。
-
-## 检查
-
-在已配置本机 Python 的项目根运行：
-
-```powershell
-python -B -m unittest discover -s tests/m2 -p 'test_*.py'
-python -B -m unittest discover -s tests/unit -p 'test_*.py'
-```
-
-软件检查覆盖协议、队列、计划、拒绝条件、后验、配置、算术及单位换算，不等价于真实NX或制造验证。tests/nx及tools/smoke-*为另需授权独立零件的实机检查。tools/diagnose-m6.py可离线检查配置，--online只查询status/ping。tools/nx_ui/是按专用进程限定的实机测试UI辅助代码。
-
-tests/nx/smoke-readiness.py --config <已安装配置绝对路径> --host <已安装tools/mcp_stdio.py>用于实际连接准备与同客户端/新客户端复用检查，只发送连接准备与状态请求，不接管、打开、读取或写入模型，也不关闭NX。结果输出stdout，不生成历史日志。
-
-公共仓库保留源码、配置模板、构建/诊断工具和功能测试；当前生产产物需按上文在本机从源码构建。历史报告、旧试验、废弃原型及旧构建不作为运行依赖。
