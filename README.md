@@ -1,3 +1,5 @@
+# 小插件V2，直接让AI安装即可。
+
 # NX Sketch MCP V2
 
 NX Sketch MCP 是 Windows 本机 MCP 服务，通过 STDIO 连接 MCP 客户端，并通过 NXOpen 桥接 Siemens NX。当前软件版本为 **0.22.0**，提供 **42 个工具**；V2 是产品阶段名称，并非软件版本号。模型操作的支持范围受几何类型、所有权、零件状态和当前会话限制，调用前请查阅 [V2 功能与边界](docs/V2.md) 和相应功能文档。
